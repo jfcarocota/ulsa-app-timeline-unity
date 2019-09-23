@@ -17,17 +17,21 @@ public class TimelineControls : MonoBehaviour
     [SerializeField]
     Button btnStopTimeline;
 
-    double timelineFrames;
+    float timelineFrames;
+
+    [SerializeField]
+    Slider timelineUI;
 
     // Start is called before the first frame update
     void Awake()
     {
-        timelineFrames = playableDirector.duration * 60;
+        timelineFrames = (float)playableDirector.duration * 60;
         btnPlayTimeline.onClick.AddListener(PlayTimeline);
         btnPauseTimeline.onClick.AddListener(PauseTimeline);
         btnStopTimeline.onClick.AddListener(StopTimeline);
         Debug.Log(playableDirector.duration);
         Debug.Log(timelineFrames);
+        timelineUI.maxValue = (float)playableDirector.duration;
     }
 
     void Update()

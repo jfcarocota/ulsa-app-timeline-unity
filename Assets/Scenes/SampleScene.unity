@@ -607,6 +607,7 @@ MonoBehaviour:
   btnPlayTimeline: {fileID: 730596183}
   btnPauseTimeline: {fileID: 1690887579}
   btnStopTimeline: {fileID: 636306281}
+  timelineUI: {fileID: 98312254}
 --- !u!1 &689137731
 GameObject:
   m_ObjectHideFlags: 0
@@ -1153,7 +1154,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.02335645, y: -0.9701387, z: 0.21787484, w: 0.10400006}
+  m_LocalRotation: {x: 0.023356445, y: -0.9701387, z: 0.21787485, w: 0.104000024}
   m_LocalPosition: {x: 0.95, y: 2.12, z: 4.38}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1711,7 +1712,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1996910944}
-  m_LocalRotation: {x: 0.02335645, y: -0.9701387, z: 0.21787484, w: 0.10400006}
+  m_LocalRotation: {x: 0.023356445, y: -0.9701387, z: 0.21787485, w: 0.104000024}
   m_LocalPosition: {x: 0.95, y: 2.12, z: 4.38}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
