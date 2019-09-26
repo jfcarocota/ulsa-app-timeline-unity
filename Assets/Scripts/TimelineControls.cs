@@ -36,7 +36,8 @@ public class TimelineControls : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(playableDirector.time);
+        //Debug.Log(playableDirector.time);
+        timelineUI.value = (float)playableDirector.time;
     }
     void PlayTimeline()
     {
