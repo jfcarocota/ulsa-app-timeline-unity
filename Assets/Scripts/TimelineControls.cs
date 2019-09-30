@@ -22,22 +22,28 @@ public class TimelineControls : MonoBehaviour
     [SerializeField]
     Slider timelineUI;
 
-    // Start is called before the first frame update
+    [SerializeField]
+    Button btnSkippRight;
+    [SerializeField]
+    Button btnSkippLeft;
+
     void Awake()
     {
         timelineFrames = (float)playableDirector.duration * 60;
+
         btnPlayTimeline.onClick.AddListener(PlayTimeline);
         btnPauseTimeline.onClick.AddListener(PauseTimeline);
         btnStopTimeline.onClick.AddListener(StopTimeline);
-        Debug.Log(playableDirector.duration);
-        Debug.Log(timelineFrames);
+
+        btnSkippRight.onClick.AddListener(SkippRight);
+        btnSkippLeft.onClick.AddListener(SkippLeft);
+
         timelineUI.maxValue = (float)playableDirector.duration;
         timelineUI.onValueChanged.AddListener(delegate{ValueChnaged();});
     }
 
     void Update()
     {
-        //Debug.Log(playableDirector.time);
         timelineUI.value = (float)playableDirector.time;
     }
     void PlayTimeline()
@@ -58,5 +64,15 @@ public class TimelineControls : MonoBehaviour
     void ValueChnaged()
     {
         playableDirector.time = (double) timelineUI.value;
+    }
+
+    void SkippRight()
+    {
+        playableDirector.time +=  2;
+    }
+
+    void SkippLeft()
+    {
+        playableDirector.time -=  2;
     }
 }
