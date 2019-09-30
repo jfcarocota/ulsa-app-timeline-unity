@@ -32,6 +32,7 @@ public class TimelineControls : MonoBehaviour
         Debug.Log(playableDirector.duration);
         Debug.Log(timelineFrames);
         timelineUI.maxValue = (float)playableDirector.duration;
+        timelineUI.onValueChanged.AddListener(delegate{ValueChnaged();});
     }
 
     void Update()
@@ -52,5 +53,10 @@ public class TimelineControls : MonoBehaviour
     void StopTimeline()
     {
         playableDirector.Stop();
+    }
+
+    void ValueChnaged()
+    {
+        playableDirector.time = (double) timelineUI.value;
     }
 }
